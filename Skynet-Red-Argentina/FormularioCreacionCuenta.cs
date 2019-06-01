@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace Skynet_Red_Argentina
 {
-    class FormularioCreacionCuenta
+    public class FormularioCreacionCuenta
     {
+
+        public static string nombre, apellido, docNTipo, docTipo = "", docNumero = "", direccion, provincia, ciudad, usuario, contraseña, verificacion;
+        
+
         public void CrearCuenta()
         {
-            string nombre, apellido, docNTipo, docTipo = "", docNumero = "", direccion, provincia, ciudad, usuario, contraseña, verificacion;
             Console.Clear();
+
             Console.WriteLine("A continuación debera crear su cuenta Skynet.");
 
             Console.Clear();
@@ -80,12 +84,17 @@ namespace Skynet_Red_Argentina
 
             Console.WriteLine("Ingrese su nuevo usuario.");
             usuario = Console.ReadLine();
+
             Console.Clear();
+
             Console.WriteLine("Ingrese su nueva contraseña.");
             contraseña = Console.ReadLine();
+
             Console.Clear();
+
             Console.WriteLine("Repita su nueva contraseña.");
             verificacion = Console.ReadLine();
+
             Console.Clear();
 
             while (contraseña != verificacion)
