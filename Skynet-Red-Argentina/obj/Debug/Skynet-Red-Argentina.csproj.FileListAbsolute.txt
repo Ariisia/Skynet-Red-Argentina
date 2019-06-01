@@ -1,0 +1,7 @@
+C:\Users\alexi\source\repos\Skynet-Red-Argentina\Skynet-Red-Argentina\bin\Debug\Skynet-Red-Argentina.exe.config
+C:\Users\alexi\source\repos\Skynet-Red-Argentina\Skynet-Red-Argentina\bin\Debug\Skynet-Red-Argentina.exe
+C:\Users\alexi\source\repos\Skynet-Red-Argentina\Skynet-Red-Argentina\bin\Debug\Skynet-Red-Argentina.pdb
+C:\Users\alexi\source\repos\Skynet-Red-Argentina\Skynet-Red-Argentina\obj\Debug\Skynet-Red-Argentina.csprojAssemblyReference.cache
+C:\Users\alexi\source\repos\Skynet-Red-Argentina\Skynet-Red-Argentina\obj\Debug\Skynet-Red-Argentina.csproj.CoreCompileInputs.cache
+C:\Users\alexi\source\repos\Skynet-Red-Argentina\Skynet-Red-Argentina\obj\Debug\Skynet-Red-Argentina.exe
+C:\Users\alexi\source\repos\Skynet-Red-Argentina\Skynet-Red-Argentina\obj\Debug\Skynet-Red-Argentina.pdb
