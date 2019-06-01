@@ -47,6 +47,8 @@ namespace Skynet_Red_Argentina
 
             }
 
+            Console.Clear();
+
             Console.WriteLine("Ha ingresado al sistema correctamente.");
             Console.WriteLine("Bienvenido Sr " + FormularioCreacionCuenta.apellido + ", para continuar presione tecla Enter");
             Console.ReadLine();

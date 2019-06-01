@@ -10,6 +10,7 @@ namespace Skynet_Red_Argentina
     {
 
         public static string nombre, apellido, docNTipo, docTipo = "", docNumero = "", direccion, provincia, ciudad, usuario, contraseña, verificacion;
+        public static int usuarioLenght, contraseñaLenght;
         
 
         public void CrearCuenta()
@@ -82,15 +83,40 @@ namespace Skynet_Red_Argentina
             ciudad = Console.ReadLine();
             Console.Clear();
 
-            Console.WriteLine("Ingrese su nuevo usuario.");
+            Console.WriteLine("Ingrese su nuevo usuario. El mismo debera poseer al menos 8 caracteres.");
             usuario = Console.ReadLine();
+            usuarioLenght = usuario.Length;
 
             Console.Clear();
 
-            Console.WriteLine("Ingrese su nueva contraseña.");
+            while (usuarioLenght < 8)
+            {
+                Console.Clear();
+                Console.WriteLine("El usuario ingresado posee menos de 8 caracteres.");
+                Console.WriteLine();
+                Console.WriteLine("Ingrese su nuevo usuario. El mismo debera poseer al menos 8 caracteres.");
+                usuario = Console.ReadLine();
+                usuarioLenght = usuario.Length;
+            }
+
+            Console.Clear();
+
+            Console.WriteLine("Ingrese su nueva contraseña. La misma debera poseer al menos 4 caracteres.");
             contraseña = Console.ReadLine();
+            contraseñaLenght = contraseña.Length;
 
             Console.Clear();
+
+            while (contraseñaLenght < 4)
+            {
+                Console.Clear();
+                Console.WriteLine("La contraseña ingresada posee menos de 4 caracteres.");
+                Console.WriteLine();
+                Console.WriteLine("Ingrese su nueva contraseña. La misma debera poseer al menos 4 caracteres.");
+                contraseña = Console.ReadLine();
+                contraseñaLenght = contraseña.Length;
+            }
+
 
             Console.WriteLine("Repita su nueva contraseña.");
             verificacion = Console.ReadLine();
