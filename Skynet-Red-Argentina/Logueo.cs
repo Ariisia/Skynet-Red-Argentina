@@ -32,9 +32,12 @@ namespace Skynet_Red_Argentina
 
                 if (contlogin == 0)
                 {
-                    return;
+                    Console.Clear();
+                    Console.WriteLine("Ha ingresado su usuario o contraseña 3 veces de manera incorrecta, el terminal se cerrara en 5 segundos.");
+                    System.Threading.Thread.Sleep(5000);
+                    Environment.Exit(0);
                 }
-
+                Console.Beep();
                 Console.Clear();
                 Console.WriteLine("Usuario o contraseña incorrectos. Tiene " + contlogin + " intentos restantes.");
                 Console.WriteLine();
