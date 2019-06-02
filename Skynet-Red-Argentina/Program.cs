@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Speech.Synthesis;
 
 namespace Skynet_Red_Argentina
 {
-    class Program
+    public class Program
     {
+        public static string cuenta, menu;
+
         static void Main(string[] args)
         {
+            SpeechSynthesizer Hablar = new SpeechSynthesizer();
             FormularioCreacionCuenta formulario = new FormularioCreacionCuenta();
             Logueo logueo = new Logueo();
             Consultas consultas = new Consultas();
             Transferencias transferencias = new Transferencias();
             GeneracionDeClaves generacion = new GeneracionDeClaves();
-            string cuenta, menu;
 
-            Console.WriteLine("Bienvenido a la red Argentina de cajeros Skynet.");
+            Console.WriteLine("Bienvenido a la Red Argentina de cajeros Skynet.");
             Console.WriteLine();
             Console.WriteLine("Para operar con esta terminal seleccione el numero de la opcion deseada y presione tecla Enter.");
             Console.WriteLine();
@@ -45,47 +48,65 @@ namespace Skynet_Red_Argentina
 
             logueo.logueo();
 
-            Console.WriteLine("Seleccione la operacion que desea realizar.");
-            Console.WriteLine("1 Consultas");
-            Console.WriteLine("2 Transferencias");
-            Console.WriteLine("3 Generación de clave");
-            Console.WriteLine("4 Pagos");
-            Console.WriteLine("5 Solicitar Mi Prestamo Skynet");
-            menu = Console.ReadLine();
-
-            while (menu != "1" && menu != "2" && menu != "3" && menu != "4" && menu != "5")
+            do
             {
-                Console.Beep();
                 Console.Clear();
-                Console.WriteLine("Por favor seleccione una opcion valida.");
-                Console.WriteLine();
                 Console.WriteLine("Seleccione la operacion que desea realizar.");
                 Console.WriteLine("1 Consultas");
                 Console.WriteLine("2 Transferencias");
                 Console.WriteLine("3 Generación de clave");
                 Console.WriteLine("4 Pagos");
                 Console.WriteLine("5 Solicitar Mi Prestamo Skynet");
+                Console.WriteLine("6 Salir de este menu");
                 menu = Console.ReadLine();
-            }
 
-            switch (menu)
-            {
-                case "1":
-                    consultas.consultas();
-                    break;
-                case "2":
-                    transferencias.transferencias();
-                    break;
-                case "3":
-                    generacion.generacionDeClaves();
-                    break;
-                case "4":
+                while (menu != "1" && menu != "2" && menu != "3" && menu != "4" && menu != "5" && menu != "6")
+                {
+                    Console.Beep();
+                    Console.Clear();
+                    Console.WriteLine("Por favor seleccione una opcion valida.");
+                    Console.WriteLine();
+                    Console.WriteLine("Seleccione la operacion que desea realizar.");
+                    Console.WriteLine("1 Consultas");
+                    Console.WriteLine("2 Transferencias");
+                    Console.WriteLine("3 Generación de clave");
+                    Console.WriteLine("4 Pagos");
+                    Console.WriteLine("5 Solicitar Mi Prestamo Skynet");
+                    menu = Console.ReadLine();
+                }
 
-                    break;
-                case "5":
+                switch (menu)
+                {
+                    case "1":
+                        consultas.consultas();
+                        break;
+                    case "2":
+                        transferencias.transferencias();
+                        break;
+                    case "3":
+                        generacion.generacionDeClaves();
+                        break;
+                    case "4":
 
-                    break;
-            }
+                        break;
+                    case "5":
+
+                        break;
+                    default:
+                        break;
+                }
+
+                Console.Clear();
+                Console.WriteLine("¿Desea realizar otra operacion?");
+                Console.WriteLine("1 Si");
+                Console.WriteLine("2 No");
+                menu = Console.ReadLine();
+
+            } while (menu == "1");
+
+            Console.Clear();
+            Console.WriteLine("Muchas gracias por utilizar la Red Argentina de cajeros Skynet.");
+            Hablar.Speak("Muchas gracias por utilizar la Red Argentina de cajeros Skainet.");
         }
     }
 }

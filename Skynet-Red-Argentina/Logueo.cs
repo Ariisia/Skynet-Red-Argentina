@@ -10,7 +10,7 @@ namespace Skynet_Red_Argentina
     {
         public void logueo()
         {
-            string veriUsuario, veriContraseña;
+            string veriUsuario = "Agustin", veriContraseña = "Rivas";
             int contlogin = 3;
 
             Console.Clear();
