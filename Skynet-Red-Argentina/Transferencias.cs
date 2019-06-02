@@ -8,9 +8,8 @@ namespace Skynet_Red_Argentina
 {
     class Transferencias
     {
-        float  transfSaliente;
+        double  transfSaliente;
         string movimiento, nombreTransf, apellidoTransf, cbuDestino, cuenta, CA = "Caja de ahorro en pesos Nº 141 324565/6";
-        List<String> Movimientos = new List<string>();
 
         public void transferencias()
         {
@@ -87,7 +86,7 @@ namespace Skynet_Red_Argentina
                         Console.Clear();
 
                         Console.WriteLine("Ingrese el monto que desea transferir. Utiliza el simbolo ',' para separar los pesos de los centavos.");
-                        transfSaliente = Convert.ToSingle(Console.ReadLine());
+                        transfSaliente = Convert.ToDouble(Console.ReadLine());
 
                         Console.Clear();
 
@@ -130,21 +129,43 @@ namespace Skynet_Red_Argentina
 
                     if (Program.menu == "1")
                     {
-                        movimiento = "***Saliente. Desde " + CA + " a CBU Nº " + cbuDestino + ". Destinatario: " + apellidoTransf + " " + nombreTransf + " . Monto: $" + transfSaliente + ".";
-                        Movimientos.Add(movimiento);
-                        System.Threading.Thread.Sleep(1500);
-                        Console.Clear();
-                        Console.WriteLine(".");
-                        System.Threading.Thread.Sleep(1500);
-                        Console.Clear();
-                        Console.WriteLine(". .");
-                        System.Threading.Thread.Sleep(1500);
-                        Console.Clear();
-                        Console.WriteLine(". . .");
-                        System.Threading.Thread.Sleep(1500);
-                        Console.Clear();
-                        Console.WriteLine("La operacion se realizo exitosamente. Presione tecla Enter para continuar.");
-                        Console.ReadLine();
+                        if (SaldoyMovimientos.saldoDisponible - transfSaliente >= 0)
+                        {
+                            movimiento = "***Saliente. Desde " + CA + " a CBU Nº " + cbuDestino + ". Destinatario: " + apellidoTransf + " " + nombreTransf + " . Monto: $" + transfSaliente + ".";
+                            SaldoyMovimientos.Movimientos.Add(movimiento);
+                            SaldoyMovimientos.saldoDisponible -= transfSaliente;
+                            System.Threading.Thread.Sleep(1000);
+                            Console.Clear();
+                            Console.WriteLine(".");
+                            System.Threading.Thread.Sleep(1000);
+                            Console.Clear();
+                            Console.WriteLine(". .");
+                            System.Threading.Thread.Sleep(1000);
+                            Console.Clear();
+                            Console.WriteLine(". . .");
+                            System.Threading.Thread.Sleep(1500);
+                            Console.Clear();
+                            Console.WriteLine("La operacion se realizo exitosamente. Presione tecla Enter para continuar.");
+                            Console.ReadLine();
+                        } else
+                        {
+                            System.Threading.Thread.Sleep(1500);
+                            Console.Clear();
+                            Console.WriteLine(".");
+                            System.Threading.Thread.Sleep(1500);
+                            Console.Clear();
+                            Console.WriteLine(". .");
+                            System.Threading.Thread.Sleep(1500);
+                            Console.Clear();
+                            Console.WriteLine(". . .");
+                            System.Threading.Thread.Sleep(1500);
+                            Console.Beep();
+                            Console.Clear();
+                            Console.WriteLine("No cuenta con saldo suficiente para realizar esta operacion.");
+                            Console.WriteLine();
+                            Console.WriteLine("Presione tecla Enter para continuar.");
+                            Console.ReadLine();
+                        }
                     }
 
                 }

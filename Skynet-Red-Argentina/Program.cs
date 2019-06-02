@@ -19,6 +19,8 @@ namespace Skynet_Red_Argentina
             Consultas consultas = new Consultas();
             Transferencias transferencias = new Transferencias();
             GeneracionDeClaves generacion = new GeneracionDeClaves();
+            Pagos pagos = new Pagos();
+            PedirPrestamo prestamo = new PedirPrestamo();
 
             Console.WriteLine("Bienvenido a la Red Argentina de cajeros Skynet.");
             Console.WriteLine();
@@ -52,6 +54,7 @@ namespace Skynet_Red_Argentina
             {
                 Console.Clear();
                 Console.WriteLine("Seleccione la operacion que desea realizar.");
+                Console.WriteLine();
                 Console.WriteLine("1 Consultas");
                 Console.WriteLine("2 Transferencias");
                 Console.WriteLine("3 Generación de clave");
@@ -67,11 +70,13 @@ namespace Skynet_Red_Argentina
                     Console.WriteLine("Por favor seleccione una opcion valida.");
                     Console.WriteLine();
                     Console.WriteLine("Seleccione la operacion que desea realizar.");
+                    Console.WriteLine();
                     Console.WriteLine("1 Consultas");
                     Console.WriteLine("2 Transferencias");
                     Console.WriteLine("3 Generación de clave");
                     Console.WriteLine("4 Pagos");
                     Console.WriteLine("5 Solicitar Mi Prestamo Skynet");
+                    Console.WriteLine("6 Salir de este menu");
                     menu = Console.ReadLine();
                 }
 
@@ -87,10 +92,10 @@ namespace Skynet_Red_Argentina
                         generacion.generacionDeClaves();
                         break;
                     case "4":
-
+                        pagos.pagos();
                         break;
                     case "5":
-
+                        prestamo.pedirPrestamo();
                         break;
                     default:
                         break;
@@ -101,6 +106,18 @@ namespace Skynet_Red_Argentina
                 Console.WriteLine("1 Si");
                 Console.WriteLine("2 No");
                 menu = Console.ReadLine();
+
+                while (menu != "1" && menu != "2")
+                {
+                    Console.Beep();
+                    Console.Clear();
+                    Console.WriteLine("Por favor seleccione una opcion valida.");
+                    Console.WriteLine();
+                    Console.WriteLine("¿Desea realizar otra operacion?");
+                    Console.WriteLine("1 Si");
+                    Console.WriteLine("2 No");
+                    menu = Console.ReadLine();
+                }
 
             } while (menu == "1");
 
