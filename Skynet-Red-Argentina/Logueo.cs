@@ -21,6 +21,8 @@ namespace Skynet_Red_Argentina
             Console.WriteLine("Ingrese su usuario.");
             veriUsuario = Console.ReadLine();
 
+            Console.WriteLine();
+
             Console.WriteLine("Ingrese su contraseña.");
             veriContraseña = Console.ReadLine();
 
@@ -44,6 +46,8 @@ namespace Skynet_Red_Argentina
 
                 Console.WriteLine("Ingrese su usuario.");
                 veriUsuario = Console.ReadLine();
+
+                Console.WriteLine();
 
                 Console.WriteLine("Ingrese su contraseña.");
                 veriContraseña = Console.ReadLine();

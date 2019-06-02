@@ -22,8 +22,12 @@ namespace Skynet_Red_Argentina
             Console.WriteLine("Ingrese su nombre.");
             nombre = Console.ReadLine();
 
+            Console.WriteLine();
+
             Console.WriteLine("Ingrese su apellido.");
             apellido = Console.ReadLine();
+
+            Console.WriteLine();
 
             Console.WriteLine("Seleccione el tipo documento:");
             Console.WriteLine("1 DNI");
@@ -75,8 +79,12 @@ namespace Skynet_Red_Argentina
             Console.WriteLine("Indique su direccion, numero, depto y piso (si fuera necesario).");
             direccion = Console.ReadLine();
 
+            Console.WriteLine();
+
             Console.WriteLine("Indique su provincia.");
             provincia = Console.ReadLine();
+
+            Console.WriteLine();
 
             Console.WriteLine("Indique su ciudad");
             ciudad = Console.ReadLine();

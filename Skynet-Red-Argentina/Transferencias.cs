@@ -9,7 +9,7 @@ namespace Skynet_Red_Argentina
     class Transferencias
     {
         double  transfSaliente;
-        string movimiento, nombreTransf, apellidoTransf, cbuDestino, cuenta, CA = "Caja de ahorro en pesos Nº 141 324565/6";
+        public static string movimiento, nombreTransf, apellidoTransf, cbuDestino, cuenta, CA = "Caja de ahorro en pesos Nº 141 324565/6";
 
         public void transferencias()
         {
@@ -125,6 +125,7 @@ namespace Skynet_Red_Argentina
                             Program.menu = Console.ReadLine();
                         } 
                     } while (Program.menu == "2");
+
                     Console.Clear();
 
                     if (Program.menu == "1")
