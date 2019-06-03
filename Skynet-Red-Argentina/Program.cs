@@ -23,6 +23,7 @@ namespace Skynet_Red_Argentina
             PedirPrestamo prestamo = new PedirPrestamo();
 
             Console.WriteLine("Bienvenido a la Red Argentina de cajeros Skynet.");
+            Hablar.Speak("Bienvenido a la Red Argentina de cajeros Skainet.");
             Console.WriteLine();
             Console.WriteLine("Para operar con esta terminal seleccione el numero de la opcion deseada y presione tecla Enter.");
             Console.WriteLine();

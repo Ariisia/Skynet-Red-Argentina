@@ -114,7 +114,7 @@ namespace Skynet_Red_Argentina
                 {
                     if (SaldoyMovimientos.saldoDisponible - montoPago >= 0)
                     {
-                        movimiento = "***Pago. Desde " + Transferencias.CA + ". Codigo de pago: " + codigo + " Concepto: " + concepto + ". Monto: $" + montoPago + ".";
+                        movimiento = "*** Pago. Desde " + Transferencias.CA + ". Codigo de pago: " + codigo + " Concepto: " + concepto + ". Monto: $" + montoPago + ".";
                         SaldoyMovimientos.Movimientos.Add(movimiento);
                         SaldoyMovimientos.saldoDisponible -= montoPago;
                         System.Threading.Thread.Sleep(1000);

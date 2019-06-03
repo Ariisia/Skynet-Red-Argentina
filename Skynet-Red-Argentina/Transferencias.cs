@@ -132,7 +132,7 @@ namespace Skynet_Red_Argentina
                     {
                         if (SaldoyMovimientos.saldoDisponible - transfSaliente >= 0)
                         {
-                            movimiento = "***Saliente. Desde " + CA + " a CBU Nº " + cbuDestino + ". Destinatario: " + apellidoTransf + " " + nombreTransf + " . Monto: $" + transfSaliente + ".";
+                            movimiento = "*** Saliente. Desde " + CA + " a CBU Nº " + cbuDestino + ". Destinatario: " + apellidoTransf + " " + nombreTransf + " . Monto: $" + transfSaliente + ".";
                             SaldoyMovimientos.Movimientos.Add(movimiento);
                             SaldoyMovimientos.saldoDisponible -= transfSaliente;
                             System.Threading.Thread.Sleep(1000);
