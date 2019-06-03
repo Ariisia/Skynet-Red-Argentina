@@ -119,7 +119,6 @@ namespace Skynet_Red_Argentina
                     Console.WriteLine("2 No");
                     menu = Console.ReadLine();
                 }
-
             } while (menu == "1");
 
             Console.Clear();
