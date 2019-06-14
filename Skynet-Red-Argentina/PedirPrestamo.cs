@@ -127,6 +127,10 @@ namespace Skynet_Red_Argentina
                     Console.WriteLine("1 " + Transferencias.CA);
                     Transferencias.cuenta = Console.ReadLine();
                 }
+                if (Transferencias.cuenta == "1" )
+                {
+                    Transferencias.cuenta = Transferencias.CA;
+                }
 
                 valorCuota = (valorPrestamo * tasa / 100 + valorPrestamo) / cantCuotas;
                 valorCuota = Math.Round(valorCuota, 2);

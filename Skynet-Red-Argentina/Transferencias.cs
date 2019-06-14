@@ -83,6 +83,10 @@ namespace Skynet_Red_Argentina
                         Console.WriteLine("1 " + CA);
                         cuenta = Console.ReadLine();
                         }
+                        if (Transferencias.cuenta == "1")
+                        {
+                            Transferencias.cuenta = Transferencias.CA;
+                        }
                         Console.Clear();
 
                         Console.WriteLine("Ingrese el monto que desea transferir. Utiliza el simbolo ',' para separar los pesos de los centavos.");
@@ -91,7 +95,7 @@ namespace Skynet_Red_Argentina
                         Console.Clear();
 
                         Console.WriteLine("Se van a transferir: $" + transfSaliente);
-                        Console.WriteLine("Desde su " + CA);
+                        Console.WriteLine("Desde su " + Transferencias.cuenta);
                         Console.WriteLine("El destinatario es: " + apellidoTransf + " " + nombreTransf + ".");
                         Console.WriteLine("CBU Nº: " + cbuDestino);
                         Console.WriteLine();

@@ -67,6 +67,11 @@ namespace Skynet_Red_Argentina
                         Transferencias.cuenta = Console.ReadLine();
                     }
 
+                    if (Transferencias.cuenta == "1")
+                    {
+                        Transferencias.cuenta = Transferencias.CA;
+                    }
+
                     Console.Clear();
                     Console.WriteLine("Ingrese el concepto del pago.");
                     concepto = Console.ReadLine();
@@ -94,7 +99,7 @@ namespace Skynet_Red_Argentina
                         Console.WriteLine("Por favor seleccione una opcion valida.");
                         Console.WriteLine();
                         Console.WriteLine("Se van a abonar $" + montoPago);
-                        Console.WriteLine("Desde su " + Transferencias.CA);
+                        Console.WriteLine("Desde su " + Transferencias.cuenta);
                         Console.WriteLine("El pago se realizara al codigo de referencia: " + codigo);
                         Console.WriteLine("El concepto del pago es: " + concepto);
                         Console.WriteLine();
@@ -114,7 +119,7 @@ namespace Skynet_Red_Argentina
                 {
                     if (SaldoyMovimientos.saldoDisponible - montoPago >= 0)
                     {
-                        movimiento = "*** Pago. Desde " + Transferencias.CA + ". Codigo de pago: " + codigo + " Concepto: " + concepto + ". Monto: $" + montoPago + ".";
+                        movimiento = "*** Pago. Desde " + Transferencias.cuenta + ". Codigo de pago: " + codigo + " Concepto: " + concepto + ". Monto: $" + montoPago + ".";
                         SaldoyMovimientos.Movimientos.Add(movimiento);
                         SaldoyMovimientos.saldoDisponible -= montoPago;
                         System.Threading.Thread.Sleep(1000);
