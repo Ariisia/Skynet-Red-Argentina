@@ -19,23 +19,12 @@ namespace Skynet_Red_Argentina
             Console.WriteLine();
             Console.WriteLine("¡Ahora con Red Argentina Skynet solicitar un prestamo nunca fue tan facil!");
             Console.WriteLine("¿Desea solicitar su prestamo ahora?");
+            Program.ask = "¿Desea solicitar su prestamo ahora?";
             Console.WriteLine();
             Console.WriteLine("1 Si");
             Console.WriteLine("2 No");
             Program.menu = Console.ReadLine();
-
-            while (Program.menu !="1" && Program.menu != "2")
-            {
-                Console.Beep();
-                Console.Clear();
-                Console.WriteLine("Por favor seleccione una opcion valida.");
-                Console.WriteLine();
-                Console.WriteLine("¿Desea solicitar su prestamo ahora?");
-                Console.WriteLine();
-                Console.WriteLine("1 Si");
-                Console.WriteLine("2 No");
-                Program.menu = Console.ReadLine();
-            }
+            Program.menu = Program.verificacion(Program.ask, Program.menu);
 
             if (Program.menu == "1")
             {
@@ -157,23 +146,12 @@ namespace Skynet_Red_Argentina
                 Console.WriteLine("Cuenta: " + Transferencias.cuenta + ".");
                 Console.WriteLine();
                 Console.WriteLine("¿Desea confirmar la operacion?");
+                Program.ask = "¿Desea confirmar la operacion?";
                 Console.WriteLine();
                 Console.WriteLine("1 Si");
                 Console.WriteLine("2 No");
                 Program.menu = Console.ReadLine();
-
-                while (Program.menu != "1" && Program.menu != "2")
-                {
-                    Console.Beep();
-                    Console.Clear();
-                    Console.WriteLine("Por favor seleccione una opcion valida.");
-                    Console.WriteLine();
-                    Console.WriteLine("¿Desea confirmar la operacion?");
-                    Console.WriteLine();
-                    Console.WriteLine("1 Si");
-                    Console.WriteLine("2 No");
-                    Program.menu = Console.ReadLine();
-                }
+                Program.menu = Program.verificacion(Program.ask, Program.menu);
 
                 if (Program.menu == "1")
                 {

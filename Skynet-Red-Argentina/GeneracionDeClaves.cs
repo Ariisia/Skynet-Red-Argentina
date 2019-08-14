@@ -74,21 +74,12 @@ namespace Skynet_Red_Argentina
 
                 Console.Clear();
                 Console.WriteLine("¿Desea generar otra clave?");
+                Program.ask = "¿Desea generar otra clave?";
                 Console.WriteLine("1 Si");
                 Console.WriteLine("2 No");
                 Program.menu = Console.ReadLine();
+                Program.menu = Program.verificacion(Program.ask, Program.menu);
 
-                while (Program.menu != "1" && Program.menu != "2")
-                {
-                    Console.Beep();
-                    Console.Clear();
-                    Console.WriteLine("Por favor seleccione una opcion valida.");
-                    Console.WriteLine();
-                    Console.WriteLine("¿Desea generar otra clave?");
-                    Console.WriteLine("1 Si");
-                    Console.WriteLine("2 No");
-                    Program.menu = Console.ReadLine();
-                }
             } while (Program.menu == "1");
         }
     }

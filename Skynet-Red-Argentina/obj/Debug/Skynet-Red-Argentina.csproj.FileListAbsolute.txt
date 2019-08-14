@@ -12,3 +12,10 @@ C:\Users\Agustin\Desktop\Skynet-Red-Argentina\Skynet-Red-Argentina\obj\Debug\Sky
 C:\Users\Agustin\Desktop\Skynet-Red-Argentina\Skynet-Red-Argentina\obj\Debug\Skynet-Red-Argentina.csproj.CoreCompileInputs.cache
 C:\Users\Agustin\Desktop\Skynet-Red-Argentina\Skynet-Red-Argentina\obj\Debug\Skynet-Red-Argentina.exe
 C:\Users\Agustin\Desktop\Skynet-Red-Argentina\Skynet-Red-Argentina\obj\Debug\Skynet-Red-Argentina.pdb
+C:\Users\User\Desktop\Programacion\C#\Skynet-Red-Argentina\Skynet-Red-Argentina\bin\Debug\Skynet-Red-Argentina.exe.config
+C:\Users\User\Desktop\Programacion\C#\Skynet-Red-Argentina\Skynet-Red-Argentina\bin\Debug\Skynet-Red-Argentina.exe
+C:\Users\User\Desktop\Programacion\C#\Skynet-Red-Argentina\Skynet-Red-Argentina\bin\Debug\Skynet-Red-Argentina.pdb
+C:\Users\User\Desktop\Programacion\C#\Skynet-Red-Argentina\Skynet-Red-Argentina\obj\Debug\Skynet-Red-Argentina.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Programacion\C#\Skynet-Red-Argentina\Skynet-Red-Argentina\obj\Debug\Skynet-Red-Argentina.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Programacion\C#\Skynet-Red-Argentina\Skynet-Red-Argentina\obj\Debug\Skynet-Red-Argentina.exe
+C:\Users\User\Desktop\Programacion\C#\Skynet-Red-Argentina\Skynet-Red-Argentina\obj\Debug\Skynet-Red-Argentina.pdb

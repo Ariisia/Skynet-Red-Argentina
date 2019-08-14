@@ -8,7 +8,7 @@ namespace Skynet_Red_Argentina
 {
     public class FormularioCreacionCuenta
     {
-        public static string nombre = "Agustín", apellido = "Rivas", docTipo, docNumero = "", direccion, provincia, ciudad, usuario = "Agustin", contraseña = "Rivas", verificacion, CBU = "0190154660000004982031";
+        public static string nombre = "Agustín", apellido = "Rivas", docTipo, docNumero = "", direccion = "Charcas 3190", provincia = "Buenos Aires", ciudad = "CABA", usuario = "Agustin", contraseña = "Rivas", verificacion, CBU = "0190154660000004982031";
         public static int usuarioLenght, contraseñaLenght;
 
         public void CrearCuenta()

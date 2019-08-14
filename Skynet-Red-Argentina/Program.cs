@@ -9,7 +9,24 @@ namespace Skynet_Red_Argentina
 {
     public class Program
     {
-        public static string cuenta, menu;
+        public static string cuenta, menu, ask;
+        //funcion que evita que el usuario elija opciones no permitidas
+        public static String verificacion(string ask, string cuenta)
+        {
+            while (cuenta != "1" && cuenta != "2")
+            {
+                Console.Beep();
+                Console.Clear();
+                Console.WriteLine("Por favor seleccione una opcion valida.");
+                Console.WriteLine();
+                Console.WriteLine(ask);
+                Console.WriteLine("1 Si");
+                Console.WriteLine("2 No");
+                cuenta = Console.ReadLine();
+
+            }
+            return cuenta;
+        }
 
         static void Main(string[] args)
         {
@@ -28,23 +45,14 @@ namespace Skynet_Red_Argentina
             Console.WriteLine("Para operar con esta terminal seleccione el numero de la opcion deseada y presione tecla Enter.");
             Console.WriteLine();
             Console.WriteLine("¿Posee ya una cuenta Skynet?");
+            ask = "¿Posee ya una cuenta Skynet?";
             Console.WriteLine("1 Si");
             Console.WriteLine("2 No");
-            cuenta = Console.ReadLine();
+            menu = Console.ReadLine();
 
-            while (cuenta != "1" && cuenta != "2")
-            {
-                Console.Beep();
-                Console.Clear();
-                Console.WriteLine("Por favor seleccione una opcion valida.");
-                Console.WriteLine();
-                Console.WriteLine("¿Posee ya una cuenta Skynet?");
-                Console.WriteLine("1 Si");
-                Console.WriteLine("2 No");
-                cuenta = Console.ReadLine();
-            }
+            menu = verificacion(ask, menu);
 
-            if (Convert.ToInt32(cuenta) == 2)
+            if (Convert.ToInt32(menu) == 2)
             {
                 formulario.CrearCuenta();
             }
@@ -104,21 +112,12 @@ namespace Skynet_Red_Argentina
 
                 Console.Clear();
                 Console.WriteLine("¿Desea realizar otra operacion?");
+                ask = "¿Desea realizar otra operacion?";
                 Console.WriteLine("1 Si");
                 Console.WriteLine("2 No");
                 menu = Console.ReadLine();
-
-                while (menu != "1" && menu != "2")
-                {
-                    Console.Beep();
-                    Console.Clear();
-                    Console.WriteLine("Por favor seleccione una opcion valida.");
-                    Console.WriteLine();
-                    Console.WriteLine("¿Desea realizar otra operacion?");
-                    Console.WriteLine("1 Si");
-                    Console.WriteLine("2 No");
-                    menu = Console.ReadLine();
-                }
+                menu = verificacion(ask, menu);
+                
             } while (menu == "1");
 
             Console.Clear();
